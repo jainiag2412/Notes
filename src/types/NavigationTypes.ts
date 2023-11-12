@@ -11,14 +11,13 @@ export type ScreenName = Screens[number];
 export type EmptyParamScreensName = Exclude<ScreenName, keyof RootStackParams>;
 
 type RootStackParams = {
-  noteDetail: {
+  NoteDetail: {
     noteId: number;
   };
-  addNoteScreen: {
-    noteItem: INote;
-    noteIndex: number
+  AddNoteScreen: {
+    noteItem?: INote;
+    noteIndex?: number
   }
-  
 };
 
 export type RootStackParamList = RootStackParams & {

@@ -1,14 +1,14 @@
 [
     {
         "id": 1,
-        "name": "Category 1"
+        "name": "Global Evidence"
     },
     {
         "id": 2,
-        "name": "Category 2"
+        "name": "Support Coordination"
     },
     {
         "id": 3,
-        "name": "Category 3"
+        "name": "Active Duty"
     }
 ]

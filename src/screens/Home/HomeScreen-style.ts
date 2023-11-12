@@ -32,4 +32,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     marginTop: moderateScale(10),
   },
+  sectionTitle: {
+    marginTop: moderateScale(20), fontWeight: "600", fontSize: moderateScale(15)
+  }
 });

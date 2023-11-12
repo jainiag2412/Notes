@@ -14,7 +14,7 @@ const initialState: NoteState = {
 
 interface EditPayload {
   note: INote;
-  index: number;
+  id: number;
 }
 
 export const noteSlice = createSlice({
@@ -26,13 +26,15 @@ export const noteSlice = createSlice({
       state.notes = [...action.payload];
     },
     deleteNote: (state, action: PayloadAction<number>) => {
-      state.notes.splice(action.payload, 1)
+      const index = state.notes.findIndex((note) => note.id === action.payload)
+      state.notes.splice(index, 1)
     },
     addNote: (state, action: PayloadAction<INote>) => {
-      state.notes.push(action.payload)
+      state.notes.push({ ...action.payload, id: state.notes.length + 1 })
     },
     editNote: (state, action: PayloadAction<EditPayload>) => {
-      state.notes[action.payload.index] = {...action.payload.note}
+      const index = state.notes.findIndex((note) => note.id === action.payload.id)
+      state.notes[index] = { ...action.payload.note }
     }
   },
 });

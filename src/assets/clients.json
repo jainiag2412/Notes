@@ -1,14 +1,14 @@
 [
     {
         "id": 1,
-        "name": "Client 1"
+        "name": "Apple Client"
     },
     {
         "id": 2,
-        "name": "Client 2"
+        "name": "Microsoft Client"
     },
     {
         "id": 3,
-        "name": "Client 3"
+        "name": "Google Client"
     }
 ]
